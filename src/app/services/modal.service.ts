@@ -9,12 +9,22 @@ interface IModal {
   providedIn: 'root',
 })
 export class ModalService {
-  private readonly modals: IModal[] = [];
+  private modals: IModal[] = [];
 
   constructor() {}
 
   register(id: string) {
     this.modals.push({ id, visible: false });
+  }
+
+  unregister(id: string) {
+    this.modals.splice(
+      this.modals.findIndex((modal: IModal): boolean => modal.id === id),
+      1
+    );
+
+    // Can be done with filter as below.
+    // this.modals = this.modals.filter((modal) => modal.id !== id);
   }
 
   isModalVisible(id: string): boolean {
