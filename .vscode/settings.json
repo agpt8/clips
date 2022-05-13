@@ -1,0 +1,8 @@
+{
+  "conventionalCommits.scopes": [
+    "project",
+    "root",
+    "docs",
+    "infra"
+  ]
+}
