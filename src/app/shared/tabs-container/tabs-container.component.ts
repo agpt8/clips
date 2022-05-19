@@ -14,6 +14,7 @@ import { TabComponent } from '../tab/tab.component';
 export class TabsContainerComponent implements AfterContentInit {
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent> =
     new QueryList<TabComponent>();
+
   constructor() {}
 
   ngAfterContentInit() {
