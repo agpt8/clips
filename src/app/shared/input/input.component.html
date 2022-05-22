@@ -22,5 +22,7 @@
     characters long. It should be at least
     {{ control.errors?.['minlength']['requiredLength']}}
     characters long.
-    <p class="text-red-400" *ngIf="control.errors?.email">Please enter a valid email address.
-  </p></ng-container>
+  <p class="text-red-400" *ngIf="control.errors?.email">Please enter a valid email address.</p>
+  <p class="text-red-400" *ngIf="control.errors?.min">Value too low!</p>
+  <p class="text-red-400" *ngIf="control.errors?.max">Value too high!</p>
+</ng-container>

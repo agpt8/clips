@@ -14,11 +14,7 @@
   <!-- Age -->
   <div class="mb-3">
     <label class="mb-2 inline-block">Age</label>
-    <input
-      formControlName="age"
-      type="number"
-      class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200 transition duration-500 focus:border-indigo-400 focus:outline-none"
-    />
+    <app-input [control]="this.age" type="number" placeholder="Enter age"></app-input>
   </div>
   <!-- Password -->
   <div class="mb-3">
