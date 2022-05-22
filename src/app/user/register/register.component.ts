@@ -36,4 +36,14 @@ export class RegisterComponent {
     confirmPassword: this.confirmPassword,
     phoneNumber: this.phoneNumber,
   });
+
+  showAlert = false;
+  alertMsg = 'Please wait while we create your account.';
+  alertColor = 'blue';
+
+  registerUser(): void {
+    this.showAlert = true;
+    this.alertMsg = 'Please wait while we create your account.';
+    this.alertColor = 'blue';
+  }
 }

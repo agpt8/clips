@@ -1,3 +1,5 @@
+<app-alert *ngIf="showAlert" [color]="alertColor">{{ alertMsg }}</app-alert>
+
 <!-- Registration Form -->
 <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
   <!-- Name -->
@@ -23,7 +25,7 @@
   <!-- Confirm Password -->
   <div class="mb-3">
     <label class="mb-2 inline-block">Confirm Password</label>
-    <app-input [control]="password" type="password" placeholder="Confirm password"></app-input>
+    <app-input [control]="confirmPassword" type="password" placeholder="Confirm password"></app-input>
   </div>
   <!-- Phone Number -->
   <div class="mb-3">
