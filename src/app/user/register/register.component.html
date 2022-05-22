@@ -19,22 +19,12 @@
   <!-- Password -->
   <div class="mb-3">
     <label class="mb-2 inline-block">Password</label>
-    <input
-      formControlName="password"
-      type="password"
-      class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200 transition duration-500 focus:border-indigo-400 focus:outline-none"
-      placeholder="Password"
-    />
+    <app-input [control]="password" type="password" placeholder="Enter password"></app-input>
   </div>
   <!-- Confirm Password -->
   <div class="mb-3">
     <label class="mb-2 inline-block">Confirm Password</label>
-    <input
-      formControlName="confirmPassword"
-      type="password"
-      class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200 transition duration-500 focus:border-indigo-400 focus:outline-none"
-      placeholder="Confirm Password"
-    />
+    <app-input [control]="password" type="password" placeholder="Confirm password"></app-input>
   </div>
   <!-- Phone Number -->
   <div class="mb-3">

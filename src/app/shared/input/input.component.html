@@ -25,4 +25,6 @@
   <p class="text-red-400" *ngIf="control.errors?.email">Please enter a valid email address.</p>
   <p class="text-red-400" *ngIf="control.errors?.min">Value too low!</p>
   <p class="text-red-400" *ngIf="control.errors?.max">Value too high!</p>
+  <p class="text-red-400" *ngIf="control.errors?.pattern">Password must be 8 characters long, have 1 uppercase
+    letter, 1 lowercase letter and 1 number.</p>
 </ng-container>

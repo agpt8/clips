@@ -14,8 +14,14 @@ export class RegisterComponent {
     Validators.min(18),
     Validators.max(120),
   ]);
-  password = new FormControl('');
-  confirmPassword = new FormControl('');
+  password = new FormControl('', [
+    Validators.required,
+    // - at least 8 characters
+    // - must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number
+    // - Can contain special characters
+    Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm),
+  ]);
+  confirmPassword = new FormControl('', [Validators.required]);
   phoneNumber = new FormControl('');
 
   registerForm: FormGroup = new FormGroup({
