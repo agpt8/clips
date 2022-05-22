@@ -1,32 +1,30 @@
 <input
   [formControl]="control"
   [type]="type"
-  class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200
-        transition duration-500 focus:border-indigo-400 focus:outline-none"
+  class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200 transition duration-500 focus:border-indigo-400 focus:outline-none"
   [placeholder]="placeholder"
   [mask]="format"
   [dropSpecialCharacters]="false"
 />
-<ng-container *ngIf="control.touched &&
-      control.dirty">
-  <p
-    *ngIf="control.errors?.['required']"
-    class="text-red-400"
-  >
+<ng-container *ngIf="control.touched && control.dirty">
+  <p *ngIf="control.errors?.['required']" class="text-red-400">
     Field is required
   </p>
-  <p
-    *ngIf="control.errors?.['minlength']"
-    class="text-red-400"
-  >
+  <p *ngIf="control.errors?.['minlength']" class="text-red-400">
     The value you inputted is
     {{ control.errors?.['minlength']['actualLength']}}
     characters long. It should be at least
     {{ control.errors?.['minlength']['requiredLength']}}
     characters long.
-  <p class="text-red-400" *ngIf="control.errors?.['email']">Please enter a valid email address.</p>
+  </p>
+
+  <p class="text-red-400" *ngIf="control.errors?.['email']">
+    Please enter a valid email address.
+  </p>
   <p class="text-red-400" *ngIf="control.errors?.['min']">Value too low!</p>
   <p class="text-red-400" *ngIf="control.errors?.['max']">Value too high!</p>
-  <p class="text-red-400" *ngIf="control.errors?.['pattern']">Password must be 8 characters long, have 1 uppercase
-    letter, 1 lowercase letter and 1 number.</p>
+  <p class="text-red-400" *ngIf="control.errors?.['pattern']">
+    Password must be 8 characters long, have 1 uppercase letter, 1 lowercase
+    letter and 1 number.
+  </p>
 </ng-container>
