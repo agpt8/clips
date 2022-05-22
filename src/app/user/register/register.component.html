@@ -9,7 +9,6 @@
   <div class="mb-3">
     <label class="mb-2 inline-block">Email</label>
     <app-input [control]="this.email" type="email" placeholder="Enter Email"></app-input>
-    />
   </div>
   <!-- Age -->
   <div class="mb-3">
@@ -29,12 +28,7 @@
   <!-- Phone Number -->
   <div class="mb-3">
     <label class="mb-2 inline-block">Phone Number</label>
-    <input
-      formControlName="phoneNumber"
-      type="text"
-      class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200 transition duration-500 focus:border-indigo-400 focus:outline-none"
-      placeholder="Enter Phone Number"
-    />
+    <app-input [control]="phoneNumber" placeholder="Enter phone number" format="(000)000-0000"></app-input>
   </div>
   <button
     type="submit"
