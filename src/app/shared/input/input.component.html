@@ -1,12 +1,12 @@
 <input
   [formControl]="control"
-  type="text"
+  [type]="type"
   class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200
         transition duration-500 focus:border-indigo-400 focus:outline-none"
-  placeholder="Enter Name"
+  [placeholder]="placeholder"
 />
 <ng-container *ngIf="control.touched &&
-      control.dirty"~>
+      control.dirty">
   <p
     *ngIf="control.errors?.['required']"
     class="text-red-400"
@@ -22,4 +22,5 @@
     characters long. It should be at least
     {{ control.errors?.['minlength']['requiredLength']}}
     characters long.
+    <p class="text-red-400" *ngIf="control.errors?.email">Please enter a valid email address.
   </p></ng-container>
