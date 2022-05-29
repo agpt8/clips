@@ -4,8 +4,9 @@
   <div class="mb-3">
     <label class="mb-2 inline-block">Email</label>
     <input
-      type="email"
-      class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200 transition duration-500 focus:border-indigo-400 focus:outline-none"
+      type="email" name="email" [(ngModel)]="credentials.email"
+      class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200
+      transition duration-500 focus:border-indigo-400 focus:outline-none"
       placeholder="Enter Email"
     />
   </div>
@@ -13,8 +14,9 @@
   <div class="mb-3">
     <label class="mb-2 inline-block">Password</label>
     <input
-      type="password"
-      class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200 transition duration-500 focus:border-indigo-400 focus:outline-none"
+      type="password" name="password" [(ngModel)]="credentials.password"
+      class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200
+      transition duration-500 focus:border-indigo-400 focus:outline-none"
       placeholder="Password"
     />
   </div>
