@@ -4,12 +4,16 @@
   <div class="mb-3">
     <label class="mb-2 inline-block">Email</label>
     <input
+      #email="ngModel"
       type="email" name="email" [(ngModel)]="credentials.email"
       class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200
       transition duration-500 focus:border-indigo-400 focus:outline-none"
       placeholder="Enter Email" required
       pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
     />
+    <p class="text-red-400 text-s italic" *ngIf="email.errors?.['required'] && email.touched && email.dirty">
+      Email is required
+    </p>
   </div>
   <!-- Password -->
   <div class="mb-3">
