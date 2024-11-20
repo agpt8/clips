@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 import { UntypedFormControl } from '@angular/forms';
 
 @Component({
@@ -7,10 +7,10 @@ import { UntypedFormControl } from '@angular/forms';
   styleUrls: ['./input.component.css'],
 })
 export class InputComponent implements OnInit {
-  @Input() control: UntypedFormControl = new UntypedFormControl();
-  @Input() type = 'text';
-  @Input() placeholder = '';
-  @Input() format = '';
+  readonly control = input<UntypedFormControl>(new UntypedFormControl());
+  readonly type = input('text');
+  readonly placeholder = input('');
+  readonly format = input('');
 
   constructor() {}
 

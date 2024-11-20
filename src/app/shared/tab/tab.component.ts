@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 
 @Component({
   selector: 'app-tab',
@@ -6,8 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./tab.component.css'],
 })
 export class TabComponent implements OnInit {
-  @Input() tabTitle = '';
-  @Input() active = false;
+  readonly tabTitle = input('');
+  readonly active = input(false);
   constructor() {}
 
   ngOnInit(): void {}
