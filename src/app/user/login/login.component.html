@@ -7,7 +7,7 @@
       #email="ngModel"
       type="email" name="email" [(ngModel)]="credentials.email"
       class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200
-      transition duration-500 focus:border-indigo-400 focus:outline-none"
+      transition duration-500 focus:border-indigo-400 focus:outline-hidden"
       placeholder="Enter Email" required
       pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
     />
@@ -22,7 +22,7 @@
       #password="ngModel"
       type="password" name="password" [(ngModel)]="credentials.password"
       class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200
-      transition duration-500 focus:border-indigo-400 focus:outline-none"
+      transition duration-500 focus:border-indigo-400 focus:outline-hidden"
       placeholder="Password" required
       pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
     />
