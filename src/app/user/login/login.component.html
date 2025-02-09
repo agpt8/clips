@@ -10,31 +10,35 @@
       transition duration-500 focus:border-indigo-400 focus:outline-hidden"
       placeholder="Enter Email" required
       pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
-    />
-    <p class="text-red-400 text-s italic" *ngIf="email.errors?.['required'] && email.touched && email.dirty">
-      Email is invalid.
-    </p>
-  </div>
-  <!-- Password -->
-  <div class="mb-3">
-    <label class="mb-2 inline-block">Password</label>
-    <input
-      #password="ngModel"
-      type="password" name="password" [(ngModel)]="credentials.password"
+      />
+      @if (email.errors?.['required'] && email.touched && email.dirty) {
+        <p class="text-red-400 text-s italic">
+          Email is invalid.
+        </p>
+      }
+    </div>
+    <!-- Password -->
+    <div class="mb-3">
+      <label class="mb-2 inline-block">Password</label>
+      <input
+        #password="ngModel"
+        type="password" name="password" [(ngModel)]="credentials.password"
       class="block w-full rounded border border-gray-400 bg-transparent py-1.5 px-3 text-gray-200
       transition duration-500 focus:border-indigo-400 focus:outline-hidden"
-      placeholder="Password" required
-      pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
-    />
-    <p class="text-red-400 text-s italic" *ngIf="password.errors?.['required'] && password.touched &&
-    password.dirty">
-      Password is invalid.
-    </p>
-  </div>
-  <button
-    type="submit" [disabled]="loginForm.invalid"
+        placeholder="Password" required
+        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+        />
+        @if (password.errors?.['required'] && password.touched &&
+          password.dirty) {
+          <p class="text-red-400 text-s italic">
+            Password is invalid.
+          </p>
+        }
+      </div>
+      <button
+        type="submit" [disabled]="loginForm.invalid"
     class="block w-full rounded bg-indigo-400 py-1.5 px-3 text-white transition hover:bg-indigo-500
   disabled:opacity-50 disabled:bg-indigo-400">
-    Login
-  </button>
-</form>
+        Login
+      </button>
+    </form>

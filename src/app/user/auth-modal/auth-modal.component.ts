@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
 
 @Component({
@@ -7,7 +7,12 @@ import { ModalService } from '../../services/modal.service';
   styleUrls: ['./auth-modal.component.css'],
 })
 export class AuthModalComponent implements OnInit, OnDestroy {
-  constructor(public modal: ModalService) {}
+  modal = inject(ModalService);
+
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+
+  constructor() {}
 
   ngOnInit(): void {
     this.modal.register('auth');

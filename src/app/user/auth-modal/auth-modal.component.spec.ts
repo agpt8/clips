@@ -8,8 +8,8 @@ describe('AuthModalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AuthModalComponent],
-    }).compileComponents();
+    imports: [AuthModalComponent],
+}).compileComponents();
   });
 
   beforeEach(() => {
