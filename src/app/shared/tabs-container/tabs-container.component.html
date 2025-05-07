@@ -6,15 +6,15 @@
         class="block rounded-sm bg-indigo-400 py-3 px-4 text-white transition hover:text-white"
         href="#"
         (click)="selectTab(tab)"
-      [ngClass]="{
+        [ngClass]="{
         'hover:text-indigo-400': !tab.active,
         'hover: bg-indigo-400 text-white text-white': tab.active
       }"
-        >
+      >
         {{ tab.tabTitle }}</a
-        >
-      </li>
-    }
-  </ul>
+      >
+    </li>
+  }
+</ul>
 
-  <ng-content></ng-content>
+<ng-content/>
