@@ -1,3 +1,9 @@
 {
-  "conventionalCommits.scopes": ["project", "root", "docs", "infra"]
+  "conventionalCommits.scopes": [
+    "project",
+    "root",
+    "docs",
+    "infra"
+  ],
+  "nxConsole.generateAiAgentRules": true
 }
