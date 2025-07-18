@@ -28,7 +28,7 @@
     "@angular-devkit/schematics": "20.0.2",
     "@angular/cli": "~20.0.0",
     "@angular/compiler-cli": "20.0.3",
-    "@nx/angular": "21.2.0",
+    "@nx/angular": "21.2.4",
     "@nx/workspace": "21.2.0",
     "@schematics/angular": "20.0.2",
     "@types/jasmine": "~5.1.4",
