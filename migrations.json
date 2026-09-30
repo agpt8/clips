@@ -1,50 +1,33 @@
 {
   "migrations": [
     {
-      "version": "21.5.0-beta.0",
-      "description": "Set the 'tsConfig' option to build and test targets to help with Angular migration issues.",
-      "factory": "./src/migrations/update-21-5-0/set-tsconfig-option",
-      "package": "@nx/angular",
-      "name": "set-tsconfig-option"
+      "version": "23.0.0-beta.16",
+      "description": "Consolidates any remaining legacy releaseTag* flat properties into the nested releaseTag object. The flat properties were removed in Nx 23.",
+      "implementation": "./dist/src/migrations/update-23-0-0/consolidate-release-tag-config",
+      "package": "nx",
+      "name": "23-0-0-consolidate-release-tag-config"
     },
     {
-      "cli": "nx",
-      "version": "21.5.0-beta.2",
-      "requires": {
-        "@angular/core": ">=20.2.0"
-      },
-      "description": "Update the @angular/cli package version to ~20.2.0.",
-      "factory": "./src/migrations/update-21-5-0/update-angular-cli",
-      "package": "@nx/angular",
-      "name": "update-angular-cli-version-20-2-0"
+      "version": "23.0.0-beta.18",
+      "description": "Adds .nx/migrate-runs to .gitignore",
+      "implementation": "./dist/src/migrations/update-23-0-0/add-migrate-runs-to-git-ignore",
+      "package": "nx",
+      "name": "23-0-0-add-migrate-runs-to-git-ignore"
     },
     {
-      "version": "21.5.0-beta.2",
-      "requires": {
-        "@angular/core": ">=20.2.0"
-      },
-      "description": "Remove any Karma configuration files that only contain the default content. The default configuration is automatically available without a specific project configurationfile.",
-      "factory": "./src/migrations/update-21-5-0/remove-default-karma-configuration-files",
-      "package": "@nx/angular",
-      "name": "remove-default-karma-configuration-files"
+      "version": "23.2.0-beta.8",
+      "description": "Sets \"cache\" on some executor-based target defaults whose caching was previously enabled by a target name default, maintaining compatibility with how cacheability resolved before Nx 23. Keys the migration cannot decide are left alone and keep working through a deprecated runtime fallback.",
+      "implementation": "./dist/src/migrations/update-23-2-0/set-cache-on-executor-target-defaults",
+      "documentation": "./dist/src/migrations/update-23-2-0/set-cache-on-executor-target-defaults.md",
+      "package": "nx",
+      "name": "23-2-0-set-cache-on-executor-target-defaults"
     },
     {
-      "cli": "nx",
-      "version": "21.6.1-beta.2",
-      "requires": {
-        "@angular/core": ">=20.3.0"
-      },
-      "description": "Update the @angular/cli package version to ~20.3.0.",
-      "factory": "./src/migrations/update-21-6-1/update-angular-cli",
-      "package": "@nx/angular",
-      "name": "update-angular-cli-version-20-3-0"
-    },
-    {
-      "version": "20.3.0",
-      "description": "Adds `BootstrapContext` to `bootstrapApplication` calls in `main.server.ts` to support server rendering.",
-      "factory": "./bundles/add-bootstrap-context-to-server-main.cjs#migrate",
-      "package": "@angular/core",
-      "name": "add-bootstrap-context-to-server-main"
+      "version": "23.0.0-beta.10",
+      "description": "Rewrites imports of `@nx/workspace/src/utilities/typescript/compilation` to `@nx/js/internal`, where the module now lives.",
+      "implementation": "./dist/src/migrations/update-23-0-0/move-typescript-compilation-import",
+      "package": "@nx/workspace",
+      "name": "23-0-0-move-typescript-compilation-import"
     }
   ]
 }
